@@ -28,4 +28,5 @@ class NimboEntity(CoordinatorEntity[NimboCoordinator]):
     @property
     def attribution(self) -> str:
         credits = self.coordinator.data.attribution if self.coordinator.data else []
-        return "; ".join([ATTRIBUTION, *credits])
+        # the API's own line is the same Nimbo credit: keep ours once, plus anything else it sends
+        return "; ".join([ATTRIBUTION, *(c for c in credits if "Nimbo Weather" not in c)])

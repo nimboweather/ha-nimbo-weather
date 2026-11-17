@@ -41,8 +41,8 @@ includes 20,000 calls a month, so two places fit. Change the interval under the 
 
 ## Attribution
 
-The entities carry the data credits in their `attribution` attribute. On the Free plan, show "Rain forecast: Nimbo
-Weather" with a link to nimboweather.com wherever you publish the data.
+The entities carry "Rain forecast: Nimbo Weather" in their `attribution` attribute. On the Free plan, show it with a
+link to nimboweather.com wherever you publish the data.
 
 ## Support
 
