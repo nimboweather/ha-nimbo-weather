@@ -1,0 +1,69 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Nimbo Weather",
+        "description": "Minute-by-minute rain for the next 3 hours. Get a free API key at nimboweather.com.",
+        "data": {
+          "api_key": "API key",
+          "name": "Name",
+          "latitude": "Latitude",
+          "longitude": "Longitude"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Nimbo Weather",
+        "description": "The API key is no longer valid. Enter a new one.",
+        "data": {
+          "api_key": "API key"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Invalid API key",
+      "cannot_connect": "Failed to connect",
+      "out_of_coverage": "This place is outside the forecast area (Europe).",
+      "rate_limited": "This key has used its calls for the month, or is sending too many at once."
+    },
+    "abort": {
+      "already_configured": "Location is already configured",
+      "reauth_successful": "Re-authentication was successful"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "data": {
+          "update_minutes": "Update interval (minutes)"
+        },
+        "data_description": {
+          "update_minutes": "Every update is one API call. Every 5 minutes is about 8,700 calls a month."
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "precipitation_now": {
+        "name": "Precipitation now"
+      },
+      "minutes_until_rain": {
+        "name": "Rain starts in"
+      },
+      "minutes_until_dry": {
+        "name": "Rain stops in"
+      },
+      "precipitation_next_hour": {
+        "name": "Precipitation next hour"
+      },
+      "issue_time": {
+        "name": "Forecast issued"
+      }
+    },
+    "binary_sensor": {
+      "rain_soon": {
+        "name": "Rain within 30 minutes"
+      }
+    }
+  }
+}

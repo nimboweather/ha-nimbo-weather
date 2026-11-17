@@ -1,0 +1,69 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Nimbo Weather",
+        "description": "La lluvia minuto a minuto para las próximas 3 horas. Clave API gratuita en nimboweather.com.",
+        "data": {
+          "api_key": "Clave API",
+          "name": "Nombre",
+          "latitude": "Latitud",
+          "longitude": "Longitud"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Nimbo Weather",
+        "description": "La clave API ya no es válida. Introduce una nueva.",
+        "data": {
+          "api_key": "Clave API"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Clave API no válida",
+      "cannot_connect": "No se pudo conectar",
+      "out_of_coverage": "Este lugar está fuera de la zona de previsión (Europa).",
+      "rate_limited": "Esta clave ha agotado sus llamadas del mes, o envía demasiadas a la vez."
+    },
+    "abort": {
+      "already_configured": "La ubicación ya está configurada",
+      "reauth_successful": "La reautenticación se realizó correctamente"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "data": {
+          "update_minutes": "Intervalo de actualización (minutos)"
+        },
+        "data_description": {
+          "update_minutes": "Cada actualización es una llamada a la API. Cada 5 minutos son unas 8.700 llamadas al mes."
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "precipitation_now": {
+        "name": "Precipitación ahora"
+      },
+      "minutes_until_rain": {
+        "name": "La lluvia empieza en"
+      },
+      "minutes_until_dry": {
+        "name": "La lluvia para en"
+      },
+      "precipitation_next_hour": {
+        "name": "Precipitación próxima hora"
+      },
+      "issue_time": {
+        "name": "Previsión emitida"
+      }
+    },
+    "binary_sensor": {
+      "rain_soon": {
+        "name": "Lluvia en 30 minutos"
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "domain": "nimbo_weather",
+  "name": "Nimbo Weather",
+  "codeowners": [
+    "@nimboweather"
+  ],
+  "config_flow": true,
+  "documentation": "https://nimboweather.com/api",
+  "integration_type": "service",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/nimboweather/ha-nimbo-weather/issues",
+  "requirements": [],
+  "version": "0.1.0"
+}

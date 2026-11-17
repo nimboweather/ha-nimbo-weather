@@ -1,0 +1,57 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Nimbo Weather",
+        "description": "Minute-by-minute rain for the next 3 hours. Get a free API key at nimboweather.com.",
+        "data": {
+          "api_key": "[%key:common::config_flow::data::api_key%]",
+          "name": "[%key:common::config_flow::data::name%]",
+          "latitude": "[%key:common::config_flow::data::latitude%]",
+          "longitude": "[%key:common::config_flow::data::longitude%]"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Nimbo Weather",
+        "description": "The API key is no longer valid. Enter a new one.",
+        "data": {
+          "api_key": "[%key:common::config_flow::data::api_key%]"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "[%key:common::config_flow::error::invalid_api_key%]",
+      "cannot_connect": "[%key:common::config_flow::error::cannot_connect%]",
+      "out_of_coverage": "This place is outside the forecast area (Europe).",
+      "rate_limited": "This key has used its calls for the month, or is sending too many at once."
+    },
+    "abort": {
+      "already_configured": "[%key:common::config_flow::abort::already_configured_location%]",
+      "reauth_successful": "[%key:common::config_flow::abort::reauth_successful%]"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "data": {
+          "update_minutes": "Update interval (minutes)"
+        },
+        "data_description": {
+          "update_minutes": "Every update is one API call. Every 5 minutes is about 8,700 calls a month."
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "precipitation_now": { "name": "Precipitation now" },
+      "minutes_until_rain": { "name": "Rain starts in" },
+      "minutes_until_dry": { "name": "Rain stops in" },
+      "precipitation_next_hour": { "name": "Precipitation next hour" },
+      "issue_time": { "name": "Forecast issued" }
+    },
+    "binary_sensor": {
+      "rain_soon": { "name": "Rain within 30 minutes" }
+    }
+  }
+}
