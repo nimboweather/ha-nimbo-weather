@@ -22,8 +22,12 @@ about 40 min"). Rain means 0.2 mm/h or more. Where no radar sees the place, the 
 
 ## Install
 
-With [HACS](https://hacs.xyz): HACS > three dots > Custom repositories > add this repository's URL, type
-"Integration". Install "Nimbo Weather" and restart Home Assistant.
+With [HACS](https://hacs.xyz): open HACS, search for "Nimbo Weather", install it and restart Home Assistant.
+
+[![Open your Home Assistant instance and open this repository in HACS.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=nimboweather&repository=ha-nimbo-weather&category=integration)
+
+If it doesn't show up in the search yet: HACS > three dots > Custom repositories > add this repository's URL, type
+"Integration", then install "Nimbo Weather" and restart.
 
 By hand: copy `custom_components/nimbo_weather` into your `config/custom_components/` and restart.
 
